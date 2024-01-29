@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --base-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex; /*flex -> 横*/
+                   /*flex-direction: column; -> 縦*/
+    justify-content: center; /*並び方　space-between*/
+    align-items: center;     /*並び方*/
+    min-height: 100vh;
+    background: url("https://vmsc.lt/img/6591a460335249665a4d3e4c3b7808b8.jpg") no-repeat;
+    background-size: cover; /*画面いっぱいに引き延ばす*/
+}
+
+.main {
+    position: relative;
+    width: 60%;
+    min-height: 90vh;
+    width: 800px;
+    margin: 30px;
+    padding: 30px 120px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 2px rgba(20, 20, 20, 0.624);
+    border-radius: 10px;
+}
+
+.main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /*bottomを揃える*/
+    border-bottom: solid 2px #000;
+    margin-bottom: 30px;
+    .headerTitle {
+        padding: 8px;
+        font-family: 'Merriweather', serif;
+        font-size: 52px;
+    }
+
+    .addButtuonArea{
+        text-decoration: none;
+        display: flex;
+        margin-bottom: 5px;
+        padding: 5px;
+        border:solid 2px #000;
+        border-radius: 8px;
+        background-color: rgb(118, 214, 209);
+        transition: 0.6s;
+        .addText{
+            transition: 0.6s;
+            font-size: 20px;
+            color: #000;
+        }
+    }
+    .addButtuonArea:hover{
+        background-color: rgb(214, 118, 182);
+        .addText{
+            color: #fff;
+        }
+    }
+
+}
+
+.main .dayOfWeekArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .dayOfWeekArea .dayOfWeek {
+    margin: 30px;
+    /* 曜日全体のstyle */
+    .dayOfWeekTitle {
+        font-size: 38px;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+}
+
+.main .dayOfWeekArea .dayOfWeek .NotifyAnimeList .noneText{
+    color: #4b4b4b;
+    font-size: 23px;
+    font-family: 'Diphylleia', serif;
+}
+
+.main .dayOfWeekArea .dayOfWeek .NotifyAnimeList .NotifyAnime{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    .NotifyAnimeTitle {
+        margin-right: 5px;
+        font-size: 20px;
+        color: #000;
+        font-family: 'Noto Sans JP', sans-serif;
+        transition: 0.4s;
+        background: transparent;
+        border: none;
+    }
+
+    .NotifyAnimeTitle:hover{
+        color:#61a5a0;
+    }
+
+
+}

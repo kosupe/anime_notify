@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>animeInfo</title>
+    <link rel="stylesheet" href="static/css/animeInfo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Noto+Sans+JP:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modalEdit">
+            <div class="weekSelectArea">
+                <div class="SelectTitle">Select week</div>
+                <div class="weekIconArea">
+                    <div class="navigation">
+                        <ul>
+                            <li class="list active" style="--clr:#b145e9">
+                                <a href="#">
+                                    <span class="icon" >月</span>
+                                </a>
+                            </li>
+                            <li class="list"        style="--clr:#f44336">
+                                <a href="#">
+                                    <span class="icon" >火</span>
+                                </a>
+                            </li>
+                            <li class="list"        style="--clr:#2196f3">
+                                <a href="#">
+                                    <span class="icon" >水</span>
+                                </a>
+                            </li>
+                            <li class="list"        style="--clr:#0fc70f">
+                                <a href="#">
+                                    <span class="icon" >木</span>
+                                </a>
+                            </li>
+                            <li class="list"        style="--clr:#f7f327">
+                                <a href="#">
+                                    <span class="icon" >金</span>
+                                </a>
+                            </li>
+                            <li class="list"        style="--clr:#5a5a5a">
+                                <a href="#">
+                                    <span class="icon" >土</span>
+                                </a>
+                            </li>
+                            <li class="list"        style="--clr:#ffa117">
+                                <a href="#">
+                                    <span class="icon" >日</span>
+                                </a>
+                            </li>
+                            <div class="indicator"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="timeSelectArea">
+                <div class="SelectTitle">Select time</div>
+                <div class="selectArea">
+                    <div class="selectdiv">
+                        <select name="selectHour">
+                            <option value="Hour" selected hidden>Hour</option>
+                        </select>
+                    </div>
+                    <div class="timetenten">:</div>
+                    <div class="selectdiv">
+                        <select name="selectMinute">
+                            <option value="Min" selected hidden>Min</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="checkArea">
+                <button>Edit</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class="header">
+            <div class="headerTitle">Now <br>Notify <br>List</div>
+            <a href="#" class="addButtuonArea">
+                <div class="addText">Add Notify</div>
+                <img src="../static/img/icon/bell.png" height="25px" width="25px">
+            </a>
+        </div>
+
+        {% block content %}
+        <div class="titleArea">
+            <div class="titleText">{{ anime_info_dict["title"] }}</div>
+        </div>
+        <div class="mainImgArea">
+            {{ anime_info_dict["mainImg_div"] }}
+        </div>
+        <div class="updateArea">
+            <div class="updateTitle">更新日時</div>
+            <div class="updateDateArea">
+                <div class="updateText">{{ anime_info_dict["week"] }}曜日&nbsp;&nbsp;<span class="updateTextTime">{{ anime_info_dict["time_hour"] }}&nbsp;:&nbsp;{{ anime_info_dict["time_minutes"] }}～</span></div>
+                <div class="updateButtonArea">
+                    <button class="editButton"   id="editButton">Edit</button>
+                    <button class="deleteButton" id="deleteButton">delete</button>
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}
+    </div>
+
+    <script src="static/js/animeInfo.js"></script>
+</body>
+
+</html>

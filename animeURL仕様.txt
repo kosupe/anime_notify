@@ -1,0 +1,33 @@
+animeURL仕様
+
+<ABEMA>
+・アニメ○○話の一覧の　class="com-content-list-ContentListItem"
+・上記があるページのルート　
+　https://abema.tv/video/title/117-36
+　https://abema.tv/video/title/ここがアニメごとのIDかな？
+・更新の日時の　
+　https://abema.tv/video/title/117-36 のURLに
+　?eg=117-36_eg1　のパラメータをつけて、
+  https://abema.tv/video/title/117-36?eg=117-36_eg1
+  com-a-CollapsedText__container　のTextにあるかな？多分。。。
+
+
+
+<amazon>
+・アニメごとの一覧URL
+　https://www.amazon.co.jp/gp/video/detail/B0CJTHJ23V
+　https://www.amazon.co.jp/gp/video/detail/ここがアニメID
+・アニメのタイトル
+　class="p-jAFk Qo+b2C"
+・更新日時は、不明　ここは手動になりそうです
+
+
+
+<Dアニメ>
+・いつもの
+
+承知しました。改めての希望日程は下記になります。
+・1月22日(月)10時～14時 　17時～
+・1月23日(火)10時～14時 　17時～
+・1月24日(水)10時～14時 　17時～
+よろしくお願いいたします。

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Noto+Sans+JP:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="headerTitle">Now <br>Notify <br>List</div>
+            <a href="#" class="addButtuonArea">
+                <div class="addText">Add Notify</div>
+                <img src="../static/img/icon/bell.png" height="25px" width="25px">
+            </a>
+        </div>
+        {% block content %}
+        <div class="dayOfWeekArea">
+            <div class="Monday dayOfWeek">
+                <div class="dayOfWeekTitle">Monday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[0] != []%}
+                    {% for notify_anime_dict in notify_anime_dict_list[0] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="Tuesday dayOfWeek">
+                <div class="dayOfWeekTitle">Tuesday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[1] != []%}
+                    {% for notify_anime_dict in notify_anime_dict_list[1] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="Wednesday dayOfWeek">
+                <div class="dayOfWeekTitle">Wednesday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[2] != []%}
+                    {% for notify_anime_dict in notify_anime_dict_list[2] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="Thursday dayOfWeek">
+                <div class="dayOfWeekTitle">Thursday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[3] != []%}
+                    {% for notify_anime_dict in notify_anime_dict_list[3] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="Friday dayOfWeek">
+                <div class="dayOfWeekTitle">Friday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[4] != [] %}
+                    {% for notify_anime_dict in notify_anime_dict_list[4] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="Saturday dayOfWeek">
+                <div class="dayOfWeekTitle">Saturday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[5] != []%}
+                    {% for notify_anime_dict in notify_anime_dict_list[5] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="Sunday dayOfWeek">
+                <div class="dayOfWeekTitle">Sunday</div>
+                <div class="NotifyAnimeList">
+                    <!-- for文回す -->
+                    {% if notify_anime_dict_list[6] != []%}
+                    {% for notify_anime_dict in notify_anime_dict_list[6] %}
+                    <div class="NotifyAnime">
+                        <form action="/animeInfo">
+                            <input type="hidden" value="{{ notify_anime_dict['id'] }}" name="id">
+                            <button type="submit" formmethod="post" class="NotifyAnimeTitle">・{{ notify_anime_dict["title"] }}</button>
+                        </form>
+                        <img src="../static/img/icon/{{ notify_anime_dict['service'] }}.png" height="40px" width="40px" class="icon">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="noneText">None</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+
+    <script src="static/js/index.js"></script>
+</body>
+
+</html>

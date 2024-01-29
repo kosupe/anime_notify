@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --base-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex; /*flex -> 横*/
+                   /*flex-direction: column; -> 縦*/
+    justify-content: center; /*並び方　space-between*/
+    align-items: center;     /*並び方*/
+    min-height: 100vh;
+    background: url("https://vmsc.lt/img/6591a460335249665a4d3e4c3b7808b8.jpg") no-repeat;
+    background-size: cover; /*画面いっぱいに引き延ばす*/
+}
+
+.main {
+    position: relative;
+    width: 60%;
+    min-height: 90vh;
+    width: 800px;
+    margin: 30px;
+    padding: 30px 120px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 2px rgba(20, 20, 20, 0.624);
+    border-radius: 10px;
+}
+
+.main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /*bottomを揃える*/
+    border-bottom: solid 2px #000;
+    margin-bottom: 30px;
+    .headerTitle {
+        padding: 8px;
+        font-family: 'Merriweather', serif;
+        font-size: 52px;
+    }
+
+    .addButtuonArea{
+        text-decoration: none;
+        display: flex;
+        margin-bottom: 5px;
+        padding: 5px;
+        border:solid 2px #000;
+        border-radius: 8px;
+        background-color: rgb(118, 214, 209);
+        transition: 0.6s;
+        .addText{
+            transition: 0.6s;
+            font-size: 20px;
+            color: #000;
+        }
+    }
+    .addButtuonArea:hover{
+        background-color: rgb(214, 118, 182);
+        .addText{
+            color: #fff;
+        }
+    }
+
+}
+
+.main .titleArea{
+    .titleText{
+        font-size: 40px;
+        font-family: 'Noto Serif JP', serif;
+    }
+}
+
+.main .mainImgArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px black;
+    border-top:    solid 2px black;
+    margin: 20px 0;
+    .mainImg{
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+
+.main .updateArea{
+    
+    .updateTitle{
+        font-size: 25px;
+        font-family: 'Merriweather', serif;
+
+    }
+    .updateDateArea {
+        display: flex;
+        align-items: center;
+        .updateText{
+            font-size: 30px;
+            font-family: 'Merriweather', serif;
+            margin-right: 50px;
+            .updateTextTime{
+                font-family: 'Bitter', serif;
+            }
+        }
+    }
+}
+
+.modal .modalEdit{
+    position: absolute;
+    top:  50vh;
+    left: 50vh;
+    z-index: 10;
+    background-color: #fff;
+    border: solid 2px black;
+    border-radius: 8px;
+}
+.modal .modalEdit .weekSelectArea {
+    .SelectTitle{
+        margin-top: 10px;
+        padding: 0 10px 0 10px;
+        font-size: 34px;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .weekIconArea{
+        background: #b1b0b0;
+        padding: 45px 10px 10px 10px;
+        border-radius: 12px;
+    }
+}
+.modal .modalEdit .timeSelectArea {
+    .SelectTitle{
+        margin-top: 10px;
+        padding: 0 10px 0 10px;
+        font-size: 34px;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .selectArea{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        .timetenten{
+            margin: 0 10px 0 10px;
+            font-size: 30px;
+        }
+        .selectdiv{
+            height: 60px;
+            width: 100px;
+            padding: 5px;
+            border: solid 2px;
+            border-radius:10px;
+        }
+        select{
+            outline: none;
+            border: none;
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            text-align-last: center;
+            font-family: 'Noto Serif JP', serif;
+        }
+    }
+}
+
+
+.navigation {
+    position: relative;
+    width: 550px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul{
+    display: flex;
+    width: 490px;
+}
+
+.navigation ul li{
+    list-style: none; /*先頭の・を消す*/
+    position: relative;
+    width: 70px; /* 350 = 70 * 7 */
+    height:  60px;
+    z-index: 2;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content:  center;
+    align-items:  center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none; /* アンダーバーなくす */
+}
+
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 55px;
+    /* background: #f00; */
+    text-align: center;
+    line-height: 65px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.5em;
+    transition: 0.5s;
+    font-family: 'Merriweather', serif;
+}
+
+.navigation ul li.active a .icon{
+    background: var(--clr);
+    transform: translateY(-27px);
+}
+.navigation ul li a .icon:hover{
+    background: var(--clr);
+    transform: translateY(-27px);
+}
+
+.navigation ul li a .icon::before{
+    content: " ";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0;
+    transition: 0.25px;
+    z-index: -1;
+}
+
+.navigation ul li.active a .icon::before{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.indicator{
+    position:  absolute;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.indicator::before{
+    content: " ";
+    position: absolute;
+    top: 5px;
+    left: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 18px #fff;
+}
+.indicator::after{
+    content: " ";
+    position: absolute;
+    top: 5px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -15px 18px #fff;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform:translateX(calc(70px * 0)) ;
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform:translateX(calc(70px * 1)) ;
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform:translateX(calc(70px * 2)) ;
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform:translateX(calc(70px * 3)) ;
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform:translateX(calc(70px * 4)) ;
+}
+.navigation ul li:nth-child(6).active ~ .indicator{
+    transform:translateX(calc(70px * 5)) ;
+}
+.navigation ul li:nth-child(7).active ~ .indicator{
+    transform:translateX(calc(70px * 6)) ;
+}
