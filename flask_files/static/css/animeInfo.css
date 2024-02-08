@@ -114,14 +114,49 @@ body {
     }
 }
 
-.modal .modalEdit{
-    position: absolute;
-    top:  50vh;
-    left: 50vh;
+.modalFilter{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    z-index: 9;
+    background: #ffffffbd;
+}
+.modalFilter.activePop{
+    width: 100%;
+    height: 100%;
+}
+.modal {
+    position: fixed;
     z-index: 10;
+}
+.modal .modalEdit{
+    position: relative;
     background-color: #fff;
     border: solid 2px black;
     border-radius: 8px;
+    opacity: 0;
+    transition: 0.2s;
+}
+.modal .modalEdit.activePop{
+    opacity: 1;
+}
+.modal .modalEdit .cancelIcon{
+    display: flex;
+    position: absolute;
+    transform: translate(-60%, 60%) scale(2.25);
+    right: 0;
+    background: #d86b6b73;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0 0 0 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.modal .modalEdit .cancelIcon:hover{
+    background: #db0000b2;
 }
 .modal .modalEdit .weekSelectArea {
     .SelectTitle{
@@ -171,7 +206,42 @@ body {
         }
     }
 }
-
+.modal .modalEdit .checkArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 30px 0 30px 0;
+    .weekText{
+        font-family: 'Merriweather', serif;
+    }
+    .timeText {
+        font-family: 'Bitter', serif;
+        
+    }
+    .doButton{
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        border: solid 0.5px #000;
+        border-radius: 5px;
+        scale: 1.5;
+        cursor: pointer;
+        background: #88ee8d67;
+        transition: 0.4s;
+        padding: 3px;
+        .checkicon{
+            padding: 2px;
+        }
+    }
+    .doButton:hover{
+        background: #00ff0dd5;
+        scale: 1.65;
+        .checkicon{
+            color: red;
+        }
+    }
+}
 
 .navigation {
     position: relative;

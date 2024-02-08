@@ -18,8 +18,10 @@
 </head>
 
 <body>
+    <div class="modalFilter" id="modalFilter"></div>
     <div class="modal">
-        <div class="modalEdit">
+        <div class="modalEdit activePop" name="modalEdit">
+            <div class="cancelIcon" name="editClose"><ion-icon name="close-outline"></ion-icon></div>
             <div class="weekSelectArea">
                 <div class="SelectTitle">Select week</div>
                 <div class="weekIconArea">
@@ -82,10 +84,12 @@
                 </div>
             </div>
             <div class="checkArea">
-                <button>Edit</button>
+                <div class="weekText" id="editWeekText">月曜日</div>&nbsp;&nbsp;
+                <div class="timeText" id="editTimeHourText">00</div>&nbsp;:&nbsp;
+                <div class="timeText" id="editTimeMinText">00</div>～
+                <button class="doButton">Save<ion-icon class="checkicon" name="checkmark-outline"></ion-icon></button>
             </div>
         </div>
-
     </div>
     <div class="main">
         <div class="header">
@@ -118,6 +122,10 @@
     </div>
 
     <script src="static/js/animeInfo.js"></script>
+    <script src="static/js/weekSelect.js"></script>
+    <script src="static/js/timeSelect.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
